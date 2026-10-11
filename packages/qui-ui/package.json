@@ -1,0 +1,58 @@
+{
+  "name": "@qui-theme/ui",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/types/index.d.ts",
+  "style": "./dist/ui.css",
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./icon": {
+      "types": "./dist/types/icon.d.ts",
+      "import": "./dist/icon.js"
+    },
+    "./icons": {
+      "types": "./dist/types/icons.d.ts",
+      "import": "./dist/icons.js"
+    },
+    "./icon-index": {
+      "types": "./dist/types/icon-index.d.ts",
+      "import": "./dist/icon-index.js"
+    },
+    "./icon-groups": {
+      "types": "./dist/types/icon-groups.d.ts",
+      "import": "./dist/icon-groups.js"
+    },
+    "./theme": {
+      "types": "./dist/types/theme.d.ts",
+      "import": "./dist/theme.js"
+    },
+    "./assets": {
+      "types": "./dist/types/assets.d.ts",
+      "import": "./dist/assets.js"
+    },
+    "./style.css": "./dist/ui.css",
+    "./regions": {
+      "types": "./dist/types/regions.d.ts",
+      "import": "./dist/regions.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "scripts": {
+    "build": "vite build && vue-tsc --emitDeclarationOnly -p tsconfig.build.json && node ../../scripts/prepare-declarations.mjs",
+    "typecheck": "vue-tsc --noEmit -p tsconfig.json"
+  },
+  "peerDependencies": {
+    "vue": "^3.5.0"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "files": [],
+  "references": [
+    { "path": "./packages/qui-ui/tsconfig.json" },
+    { "path": "./apps/demo/tsconfig.json" }
+  ]
+}

@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <link rel="icon" href="./favicon.ico" />
+    <title>Web 组件库</title>
+    <style>
+      :root { --bg_bottom_standard: #f0f0f2; }
+      html, body { margin: 0; min-height: 100vh; }
+      [data-qui-theme] { min-height: 56px; margin-bottom: 16px; }
+      [data-qui-theme] button:focus-visible { outline: 2px solid var(--brand_standard, #09f); outline-offset: 4px; }
+      .qui-icon_item { content-visibility: auto; contain-intrinsic-size: auto 47px; }
+      .qui-icon_item[data-qui-visible] { content-visibility: visible; }
+    </style>
+  </head>
+  <body style="background: var(--bg_bottom_standard, #f0f0f2)">
+    <script>document.body.classList.toggle('default-dark', matchMedia('(prefers-color-scheme: dark)').matches)</script>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

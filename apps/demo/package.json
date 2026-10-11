@@ -1,0 +1,14 @@
+{
+  "name": "@qui-theme/demo",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node ../../scripts/prepare-reference.mjs && vite --host 127.0.0.1",
+    "build": "node ../../scripts/prepare-reference.mjs && vite build",
+    "typecheck": "node ../../scripts/prepare-reference.mjs && vue-tsc --noEmit -p tsconfig.json"
+  },
+  "dependencies": {
+    "@qui-theme/ui": "workspace:*",
+    "vue": "^3.5.43"
+  }
+}
